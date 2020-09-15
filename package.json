@@ -3,7 +3,7 @@
 	"author": "Mikail Mirashaj",
 	"description": "A project that does something tectonic",
 	"keywords": [ "freecodecamp", "microservice", "guide" ],
-
+	"license": "Harvard",
 
 	"dependencies": {
 		"express": "^4.14.0"
