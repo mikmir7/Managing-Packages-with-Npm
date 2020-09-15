@@ -2,6 +2,7 @@
 	"name": "fcc-learn-npm-package-json",
 	"author": "Mikail Mirashaj",
 	"description": "A project that does something tectonic",
+	"keywords": ["microservice", "project", "backend"],
 	"dependencies": {
 		"express": "^4.14.0"
 	},
