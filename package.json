@@ -4,6 +4,7 @@
 	"description": "A project that does something tectonic",
 	"keywords": [ "freecodecamp", "microservice", "guide" ],
 	"license": "Harvard",
+	"version": "1.02.03",
 
 	"dependencies": {
 		"express": "^4.14.0"
