@@ -50,7 +50,18 @@ app.use("/public", express.static(__dirname + "/public"));
 
 
 /** 8) Chaining middleware. A Time server */
+function getTheCurrentTimeString() {
+    return new Date().toString();
+}
 
+app.get("/now", function(req, res, next) {
+    req.time = getTheCurrentTimeString();
+    next();
+}, function(req, res) {
+    res.json ({time: req.time});
+ 
+
+});
 
 /** 9)  Get input from client - Route parameters */
 
