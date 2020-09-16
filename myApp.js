@@ -33,11 +33,16 @@ app.get("/json", (req, res) => {
 
 /** 6) Use the .env file to configure the app */
  app.get("/json", (req, res) => {
-     var jsonResponse = { "message": "Hello json"}
+      console.log(process.env.MESSAGE_STYLE, " <= message style ");
      if (process.env.MESSAGE_STYLE == "uppercase") {
-         jsonResponse.message = jsonResponse.message.toUpperCase()
+         res.json (
+             { "message": "Hello JSON"}
+         )
+     } else {
+        res.json (
+            { "message": "Hello json"}
+        )
      }
-     res.json(jsonResponse);
  });
  
 /** 7) Root-level Middleware - A logger */
