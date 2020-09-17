@@ -4,6 +4,7 @@ const { setupBackgroundApp } = require('fcc-express-bground');
 var app = express();
 var bGround = require('fcc-express-bground');
 require("dotenv").config();
+var bodyParser = require('body-parser');
 // --> 7)  Mount the Logger middleware here
 app.use(function (req, res, next) {
  console.log(req.method + " " + req.path + " - " + req.ip);
@@ -12,7 +13,9 @@ app.use(function (req, res, next) {
 );
 
 // --> 11)  Mount the body-parser middleware  here
+app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(bodyParser.json()); 
 
 /** 1) Meet the node console. */
 bGround.log("Hello World");
