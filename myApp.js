@@ -58,7 +58,7 @@ app.get("/now", function(req, res, next) {
     req.time = getTheCurrentTimeString();
     next();
 }, function(req, res) {
-    res.json ({time: req.time});
+    res.send ({time: req.time});
  
 
 })
